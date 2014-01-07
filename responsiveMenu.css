@@ -1,0 +1,168 @@
+
+/* -----------------------------------------------------------------------------
+   responsiveMenu core
+----------------------------------------------------------------------------- */
+
+.responsive-menu {
+	position: relative;
+}
+
+	.responsive-menu li {
+		display: inline-block;
+	}
+
+	.responsive-menu-trigger {
+		display: none;
+	}
+
+
+/* -----------------------------------------------------------------------------
+   responsiveMenu theme
+----------------------------------------------------------------------------- */
+
+.responsive-menu-theme ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #fff;
+	text-align: center;
+}
+
+	.responsive-menu li {
+		vertical-align: middle;
+	}
+
+	.responsive-menu-theme a {
+		text-decoration: none;
+		display: block;
+		border: 1px solid #333;
+		border-left: none;
+		color: #333;
+		padding: 0.5em 1em
+	}
+
+	.responsive-menu-theme li:first-child a {
+		border-left: 1px solid #333;
+	}
+
+	.responsive-menu-theme .active a,
+	.responsive-menu-theme a:hover,
+	.responsive-menu-theme a:focus,
+	.responsive-menu-theme a:active {
+		background: #f5f5f5;
+		color: #333;
+	}
+
+
+
+/* Expanded */
+.responsive-menu-expanded ul {
+	position: absolute;
+	top: 100%;
+	left: 0:;
+	width: 200px;
+	text-align: left;
+	border: 1px solid #333;
+
+	-webkit-transform: translate3d(0,0,0)scale(1);
+	-webkit-animation: slideIn .35s ease-in-out;
+
+	-moz-transform: translate3d(0,0,0)scale(1);
+	-moz-animation: slideIn .35s ease-in-out;
+
+	transform: translate3d(0,0,0)scale(1);
+	animation: slideIn .35s ease-in-out;
+}
+
+
+	.responsive-menu-expanded a {
+		border: none;
+		padding: 0.3em
+	}
+
+	.responsive-menu-expanded li:first-child a {
+		border-left: none;
+	}
+
+
+.responsive-menu-trigger {
+	border: 1px solid #333;
+	background: #f5f5f5;
+	color: #333;
+}
+
+.responsive-menu-expanded .responsive-menu-trigger,
+.responsive-menu-trigger:hover,
+.responsive-menu-trigger:focus,
+.responsive-menu-trigger:active {
+	background: #fff;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+	/* responsiveMenu core rules */
+
+	.responsive-menu-trigger {
+		display: block;
+	}
+
+		.responsive-menu li {
+			display: block;
+			margin-left: 0;
+		}
+
+		.js .responsive-menu li {
+			display: none;
+		}
+
+		.js .responsive-menu-expanded li {
+			display: block;
+		}
+
+}
+
+
+
+
+
+@-webkit-keyframes slideIn {
+	0% {
+		opacity: .3;
+		-webkit-transform: translate3d(0, -25%, 0) scale(.97);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0) scale(1);
+	}
+}
+
+@-moz-keyframes slideIn {
+	0% {
+		opacity: .3;
+		-moz-transform: translate3d(0, -25%, 0) scale(.97);
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: translate3d(0,0,0) scale(1);
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		opacity: .3;
+		transform: translate3d(0, -25%, 0) scale(.97);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0,0,0) scale(1);
+	}
+}
+
+

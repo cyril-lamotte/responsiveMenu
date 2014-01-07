@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 7]><html lang="fr" class="ie7 oldies"><![endif]-->
+<!--[if IE 8]><html lang="fr" class="ie8 oldies"><![endif]-->
+<!--[if IE 9]><html lang="fr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+
+	<title>Responsive Menu - Demo</title>
+
+	<!-- CSS : En production, regrouper & compresser les CSS -->
+	<link rel="stylesheet" media="all" href="normalize.css" />
+	<link rel="stylesheet" media="all" href="responsiveMenu.css" />
+
+	<!-- Modernizr http://modernizr.com/docs/#installing -->
+	<script src="http://cdn.jsdelivr.net/modernizr/2.7.1/modernizr.min.js"></script>
+
+</head>
+
+<body>
+
+<main role="main">
+
+	<h1>Responsive Menu</h1>
+
+	<p>Réduire la fenêtre du navigateur (&lt; 767px) pour afficher le menu dépliant.</p>
+
+	<nav class="responsive-menu responsive-menu-theme">
+		<ul>
+			<li><a href="index.html?p=pe">Pêches</a></li><!--
+			--><li class="active"><a href="index.html?p=pm">Pommes</a></li><!--
+			--><li><a href="index.html?p=pg">Pommes Golden</a></li><!--
+			--><li><a href="#po">Poires (ancre HTML)</a></li><!--
+			--><li><a href="#sc">Scoubidous (ancre HTML)</a></li>
+		</ul>
+	</nav>
+
+	<p><a href="http://cyril-lamotte.github.io">cyril-lamotte.github.io</a></p>
+
+</main>
+
+<!-- Scripts : Placés en fin de page pour de meilleures performances -->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="jquery.accessUI.js"></script>
+<script src="jquery.responsiveMenu.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		// Menu responsive
+		if( $.fn.responsiveMenu )
+			$('nav.responsive-menu').responsiveMenu();
+
+	}); // /ready
+</script>
+
+
+</body>
+</html>
