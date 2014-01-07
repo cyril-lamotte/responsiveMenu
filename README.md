@@ -26,7 +26,7 @@ Menu simple responsive & accessible (Plugin jQuery)
 
 ```html
 <script src="jquery.accessUI.js"></script>
-<script src="jquery.responsiveMenu.js""></script>
+<script src="jquery.responsiveMenu.js"></script>
 ```
 
 ```html
